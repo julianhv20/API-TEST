@@ -16,7 +16,7 @@ pip install -r requirements.txt
 
 Create a `.env` file in the root directory with the following content:
 
-```
+```env
 API_KEY=your_api_key_here
 BASE_URL=https://v3.recurly.com
 ACCOUNT_ID=your_account_id
@@ -42,27 +42,28 @@ The project includes several API functions for Recurly:
 
 ## 💻 Usage Examples
 
-### Running Tests
+### Creating a New Subscription
 
 ```bash
-python run_tests_with_logs.py
+python create_subscription_example.py
 ```
 
-### Get Account Information
+This script demonstrates how to:
+
+- Create a new subscription for an existing account
+- Handle API responses and errors
+- Save subscription details to JSON files
+
+Example code for creating a subscription:
 
 ```python
-from src.api_calls import get_account_info
+from src.api_calls import create_subscription
 
-result = get_account_info()
-print(result)
-```
-
-### Create Account with Subscription
-
-```python
-from src.api_calls import create_account_and_subscribe
-
-result = create_account_and_subscribe()
+result = create_subscription(
+    account_code="your_account_code",
+    plan_code="your_plan_code",
+    currency="USD"
+)
 print(result)
 ```
 
