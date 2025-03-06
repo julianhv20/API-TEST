@@ -20,7 +20,15 @@ Create a `.env` file in the root directory with the following content:
 API_KEY=your_api_key_here
 BASE_URL=https://v3.recurly.com
 ACCOUNT_ID=your_account_id
+PLAN_CODE=your_plan_code_here
 ```
+
+Environment Variables:
+
+- `API_KEY`: Your Recurly API key
+- `BASE_URL`: Recurly API base URL
+- `ACCOUNT_ID`: Your Recurly account identifier
+- `PLAN_CODE`: The plan code for subscriptions
 
 ## 🚀 Available Features
 

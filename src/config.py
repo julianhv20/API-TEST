@@ -7,6 +7,7 @@ load_dotenv()
 API_KEY = os.getenv("API_KEY")
 BASE_URL = os.getenv("BASE_URL")
 ACCOUNT_ID = os.getenv("ACCOUNT_ID")
+PLAN_CODE = os.getenv("PLAN_CODE")
 
 # Codificar la API Key en Base64
 ENCODED_API_KEY = base64.b64encode(API_KEY.encode()).decode()
