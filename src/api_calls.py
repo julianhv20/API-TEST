@@ -1,7 +1,7 @@
 import requests
 import json
 import logging
-from src.config import BASE_URL, HEADERS, ACCOUNT_ID
+from src.config import BASE_URL, HEADERS, ACCOUNT_ID, PLAN_CODE
 import time
 
 # Log configuration
@@ -84,7 +84,7 @@ def create_account_and_subscribe():
         },
         "subscriptions": [
             {
-                "plan_code": "test_plan_001",
+                "plan_code": f"{PLAN_CODE}",
                 "quantity": 1
             }
         ]
